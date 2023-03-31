@@ -1,10 +1,10 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
-  --light: #e3e4e3;
-  --dark: #182c23;
+  --primary: #3c3c3c;
+  --secondary: #000000;
+  --tertiary: #6ba096;
+  --quatrinary: #cbb45a;
+  --light: #ffffff;
+  --dark: #000000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -16,23 +16,77 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-color: var(--quatrinary);
+  background-color: var(--primary);
 }
 
 a {
-  color: var(--dark);
+  color: var(--light);
   text-decoration: none;
 }
 
 a:visited {
-  color: inherit;
+  color: (--quatrinary);
 }
 
 header {
-  padding: 40px;
-  text-align: center;
-  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+}
+
+.menu {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: (--light);
+  font-weight: bold;
+}
+
+.menu a:hover {
   color: var(--light);
+  background-color: var(--dark);
+}
+
+.logo {
+  float: left;
+  max-height: 125px;
+  margin-right: 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+li:last-child {
+  margin-right: 0;
 }
 
 main {
@@ -43,15 +97,15 @@ main {
 
 aside {
   flex: 0;
-  background-color: var(--tertiary);
+  background-color: var(--primary);
   padding: 80px;
   text-align: left;
   color: var(--light);
 }
 
 nav {
+  height: 150px;
   display: flex;
-  background-color: var(--secondary);
 }
 
 nav a {
@@ -62,7 +116,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary);
+  color: var(--light);
   background-color: var(--dark);
 }
 
@@ -77,6 +131,9 @@ nav a:hover {
 }
 
 .btn-no-style {
+  color: (var(--light));
+  height: 50px;
+  width: 120px;
   background: none;
   border: none;
   padding: 0;
@@ -85,6 +142,11 @@ nav a:hover {
   font-size: 100%;
   transition: color 0.1s;
   margin-left: 16px;
+}
+
+.btn-no-style:hover {
+  color: var(--light);
+  background-color: var(--dark);
 }
 
 img {
@@ -124,7 +186,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: #404040;
   color: var(--light);
 }
 
@@ -133,7 +195,7 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--tertiary);
+  background-color: var(--primary);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }

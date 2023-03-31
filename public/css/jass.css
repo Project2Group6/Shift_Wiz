@@ -357,8 +357,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: 16px;
-  color: #1a1a1a;
+  font-size: 20px;
+  /* nav bar text color */
+  color: #ffffff;
 }
 
 h1,
@@ -1009,12 +1010,13 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
-  color: #d9e9e8;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: #555e67;
+  color: #ffffff;
 }
 
 .btn.btn-danger {
