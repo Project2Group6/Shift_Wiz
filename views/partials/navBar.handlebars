@@ -3,6 +3,14 @@
 
         
             <ul class="flex flex-row w-[40%] justify-between items-center">
+                <li>
+                    <select name="requests" class="hover:pointer bg-black hover:bg-white p-2  px-4 rounded-xl hover:text-black" id="requests">
+                        <option hidden value="0">Requests</option>
+                        <option value="availability">Availability</option>
+                        <option value="pto">PTO</option>
+                        <option value="sickCall">Sick Call</option>
+                    </select>
+                </li>
                 <li><a href="/schedule" class="hover:pointer hover:bg-white p-2  px-4 rounded-xl hover:text-black">Schedule</a></li>
                 <li><a href="/profile"class="hover:pointer hover:bg-white p-2 px-4  rounded-xl hover:text-black">Profile</a></li>
                 <li><a href="/logout"class="hover:pointer hover:bg-white p-2 px-4  rounded-xl hover:text-black">Logout</a></li>
