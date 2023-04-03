@@ -38,6 +38,11 @@
   display: block;
 }
 
+.splash-screen {
+color: #000000;
+
+}
+
 .dropbtn {
   display: inline-block;
   color: white;
