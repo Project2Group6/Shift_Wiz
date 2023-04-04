@@ -15,16 +15,22 @@
       <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
       <ul>
         {{#if loggedIn}}
-        <li><button id="schedule" class="btn-no-style">Schedule</button></li>
-        <li><button id="Profile" class="btn-no-style">Profile</button></li>
-        <li><button id="logout" class="btn-no-style">Logout</button></li>
+        <a href="/schedule">
+          <button class="btn-no-style">Schedule</button>
+        </a>
+        <a href="/profile">
+          <button class="btn-no-style">Profile</button>
+        </a>
+        <a>
+          <button id="logout" class="btn-no-style">Logout</button>
+        </a>
         {{else}}
         <li><a href="/login">Login</a></li>
         {{/if}}
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="gallery">
       {{{body}}}
     </div>

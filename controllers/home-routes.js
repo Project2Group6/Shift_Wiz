@@ -72,6 +72,45 @@ router.get('/painting/:id', withAuth, async (req, res) => {
   }
 });
 
+// GET schedule page
+router.get('/schedule', (req, res) => {
+  try {
+    // TODO: Fetch schedule data from the database and pass it to the template
+    const scheduleData = [
+      { date: '2023-04-03', event: 'Event 1' },
+      { date: '2023-04-04', event: 'Event 2' },
+      { date: '2023-04-05', event: 'Event 3' },
+      { date: '2023-04-06', event: 'Event 4' },
+      { date: '2023-04-07', event: 'Event 5' },
+    ];
+
+    res.render('schedule', {
+      schedule: scheduleData,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// GET profile page
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // TODO: Fetch user data from the database and pass it to the template
+    const userData = await User.findByPk(req.session.userId, {
+      attributes: ['firstName', 'lastName', 'email', 'username'],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', { user, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
