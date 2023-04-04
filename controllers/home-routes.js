@@ -3,9 +3,13 @@ const { Gallery, Painting } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
-// GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
+    // Check if user is logged in
+    if (req.session.loggedIn) {
+      return res.redirect('/schedule');
+    }
+
     const dbGalleryData = await Gallery.findAll({
       include: [
         {
@@ -28,6 +32,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // GET one gallery
 // Use the custom middleware before allowing the user to access the gallery
@@ -102,9 +107,12 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: ['firstName', 'lastName', 'email', 'username'],
     });
 
-    const user = userData.get({ plain: true });
+    // const user = userData.get({ plain: true });
 
-    res.render('profile', { user, loggedIn: req.session.loggedIn });
+    res.render('profile', {
+      user,
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
