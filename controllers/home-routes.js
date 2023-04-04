@@ -72,7 +72,7 @@ router.get('/painting/:id', withAuth, async (req, res) => {
   }
 });
 
-// GET schedule page
+// GET schedule page (TEMPLATE CODE)
 router.get('/schedule', (req, res) => {
   try {
     // TODO: Fetch schedule data from the database and pass it to the template
@@ -94,7 +94,7 @@ router.get('/schedule', (req, res) => {
   }
 });
 
-// GET profile page
+// GET profile page (TEMPLATE CODE)
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // TODO: Fetch user data from the database and pass it to the template
