@@ -1,4 +1,4 @@
-const { TimeOff } = require('../TimeOff');
+const TimeOff = require('../models/TimeOff');
 
 const timeOffData = [
   {

@@ -21,31 +21,31 @@ Employee.init(
         },
         works_sunday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_monday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_tuesday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_wednesday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_thursday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_friday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         works_saturday: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -62,6 +62,7 @@ Employee.init(
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'employee'
