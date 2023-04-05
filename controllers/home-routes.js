@@ -10,21 +10,7 @@ router.get('/', async (req, res) => {
       return res.redirect('/schedule');
     }
 
-    const dbGalleryData = await Gallery.findAll({
-      include: [
-        {
-          model: Painting,
-          attributes: ['filename', 'description'],
-        },
-      ],
-    });
-
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-
     res.render('homepage', {
-      galleries,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
