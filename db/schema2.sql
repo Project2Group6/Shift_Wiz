@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS shiftWiz_db;
-
-CREATE DATABASE shiftWiz_db;
