@@ -75,4 +75,4 @@ const timeOffData = [
 
 const seedTimeOff = () => TimeOff.bulkCreate(timeOffData)
 
-module.exports = seedTimeOff
+module.exports = seedTimeOff;
