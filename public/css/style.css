@@ -1,0 +1,109 @@
+* {
+  font-family: 'Lato', sans-serif;
+ }
+ 
+ 
+ body {
+  background-color: #E4E4E4;
+ }
+ 
+ 
+ .login-div, .signup-div {
+  margin: 100px auto;
+  width: 350px;
+  background-color: gray ;
+  opacity: 0.7;
+  padding: 60px;
+  border-radius: 25px;
+ }
+ 
+ 
+ .login-logo {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+ }
+ 
+ 
+ .login-logo img {
+  width: 65%;
+  margin-left: 30px;
+  margin-top: 5px;
+ }
+ 
+ 
+ .login-title, .login-sub-title {
+  text-align: center;
+  color: black;
+ }
+ 
+ 
+ .login-title {
+  font-weight: bolder;
+  font-size: 35px;
+ }
+ 
+ 
+ .login-sub-title {
+  font-size: 18px;
+  margin-top: 10px;
+ }
+ 
+ 
+ .form-group {
+  width: 100%;
+  margin-top: 30px; 
+ }
+ 
+ 
+ .form-group input {
+  font-size: 18px;
+  padding: 10px 20px 10px 5px;
+  border: none;
+  outline: none;
+  background: white;
+ }
+ 
+ 
+ .form-input {
+  display: block;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+ }
+ 
+ 
+ .login-button, .signup-button {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+ }
+ 
+ 
+ .form-group button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+ }
+ 
+ 
+ .form-group button:active {
+  background-color: white;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
+ }
+ 
