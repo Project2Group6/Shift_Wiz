@@ -139,7 +139,7 @@ body {
 
 /* aside {
   flex: 0;
-  background-color: var(--tertiary);
+  background-color: var(--primary);
   padding: 80px;
   text-align: left;
   color: var(--light);
@@ -164,7 +164,7 @@ body {
 
 /* .gallery {
   flex: 4;
-  background-color: #fff;
+  background-color: #e4e4e4;
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
