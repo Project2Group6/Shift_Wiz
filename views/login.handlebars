@@ -1,18 +1,22 @@
-<div class="row justify-space-between-md">
+<div class = "login-div">
   <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
+    <div class="logo">
+        <img src="/public/images/ShiftWizWIP.png" alt="icon of wizard wearing a hat" width="150">
+    </div>
+    <div class="title">Login</div>
+    <div class="sub-title">Master your schedule</div>
+    <form class="login-form">
       <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
+        {{!-- <label for="email-login">Email:</label> --}}
+        <input class="form-input" type="text" id="email-login" placeholder="Email" />
       </div>
       <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
+        {{!-- <label for="password-login">Password:</label> --}}
+        <input class="form-input" type="password" id="password-login" placeholder="Password"/>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-        <button onclick="window.location.href = '/signup'">Sign Up</button>
+        <button class="button" type="submit">Login</button>
+        <button class = "button" onclick="window.location.href = '/signup'">Sign Up</button>
       </div>
     </form>
   </div>
