@@ -4,18 +4,85 @@
 
 body {
   background-color: #E4E4E4;
+  background-image: url("https://i.pinimg.com/originals/3a/0b/40/3a0b40d96c53860572a1c29970ce14a8.gif ");
 }
 
-.login-div {
+.login-div, .signup-div {
   margin: 100px auto;
   width: 350px;
   background-color: gray ;
+  opacity: 0.7;
   padding: 60px;
+  border-radius: 25px;
 }
 
-.logo {
+.login-logo {
   background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
+
+.login-logo img {
+  width: 65%;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.login-title, .login-sub-title {
+  text-align: center;
+  color: black;
+}
+
+.login-title {
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.login-sub-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 30px;  
+}
+
+.form-group input {
+  font-size: 18px;
+  padding: 10px 20px 10px 5px;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.form-input {
+  display: block;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.login-button, .signup-button {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px; 
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+} 
+
 /* :root {
   --primary: #3d5852;
   --secondary: #86938f;
@@ -152,7 +219,7 @@ body {
   color: white; */
 /* }  */
 
-.button {
+/* .login-button, .signup-button {
   background-color: #ddd;
   border: none;
   color: black;
@@ -170,11 +237,11 @@ body {
   background-color: white;
   box-shadow: 0 5px gray;
   transform: translateY(4px);
-}
+} 
 
 .form-group {
   padding: 20px 20px;
-}
+} */ 
 /* .card header {
   color: var(--light);
   font-weight: bold;
