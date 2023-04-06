@@ -4,7 +4,6 @@
 
 body {
   background-color: #E4E4E4;
-  background-image: url("https://i.pinimg.com/originals/3a/0b/40/3a0b40d96c53860572a1c29970ce14a8.gif ");
 }
 
 .login-div, .signup-div {
@@ -81,6 +80,18 @@ body {
   margin: 10px auto;
   background-color: black;
   color: white;
+} 
+
+.form-group button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+}
+
+.form-group button:active {
+  background-color: white;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
 } 
 
 /* :root {
@@ -231,13 +242,9 @@ body {
   cursor: pointer;
   border-radius: 20px;
 }
-.button:hover {background-color: white}
 
-.button:active {
-  background-color: white;
-  box-shadow: 0 5px gray;
-  transform: translateY(4px);
-} 
+
+
 
 .form-group {
   padding: 20px 20px;
