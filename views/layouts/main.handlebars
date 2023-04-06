@@ -11,27 +11,32 @@
 
 <body>
   <header>
-    <h1></h1>
+    <nav class="menu">
+      <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
+      <ul>
+        {{#if loggedIn}}
+        <a href="/schedule">
+          <button class="btn-no-style">Schedule</button>
+        </a>
+        <a href="/profile">
+          <button class="btn-no-style">Profile</button>
+        </a>
+        <a>
+          <button id="logout" class="btn-no-style">Logout</button>
+        </a>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
-      <h2></h2>
-    </aside>
-    <div class="">
+  <main id="main-content">
+    <div class="gallery">
       {{{body}}}
     </div>
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   {{/if}}
 </body>
-
-</html>
