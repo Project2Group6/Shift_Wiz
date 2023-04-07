@@ -13,7 +13,7 @@ Say goodbye to the headaches of traditional scheduling and embrace the convenien
 ## Table of Contents:
 
 * [Usage](#usage)
-* [Screenshot](#screenshot)
+* [Screenshots](#screenshots)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -22,7 +22,7 @@ Say goodbye to the headaches of traditional scheduling and embrace the convenien
 
 Visit (placeholder) to sign up and test ShiftWiz for yourself!
 
-## Screenshot:
+## Screenshots:
 ![Screenshot of Application](./assets/images/screenshot.png)
 ![Screenshot of Application](./assets/images/screenshot1.png)
 ![Screenshot of Application](./assets/images/screenshot2.png)
