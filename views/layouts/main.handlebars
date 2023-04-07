@@ -1,10 +1,13 @@
+
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shift Wiz</title>
+  <title>ShiftWiz</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
@@ -14,9 +17,19 @@
     <nav class="menu">
       <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
       <ul>
-        {{#if loggedIn}} 
+        {{#if loggedIn}}
+
         <a href="/schedule">
           <button class="btn-no-style">Schedule</button>
+        </a>
+        <a href="/availability">
+          <button class="btn-no-style">Availability</button>
+        </a>
+        <a href="/pto">
+          <button class="btn-no-style">PTO</button>
+        </a>
+        <a href="/sick-calls">
+          <button class="btn-no-style">Sick Call</button>
         </a>
         <a href="/profile">
           <button class="btn-no-style">Profile</button>
@@ -24,7 +37,7 @@
         <a>
           <button id="logout" class="btn-no-style">Logout</button>
         </a>
-       {{else}}
+        {{else}}
         <li><a href="/login">Login</a></li>
         {{/if}}
       </ul>
