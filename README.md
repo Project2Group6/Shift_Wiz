@@ -20,7 +20,7 @@ Say goodbye to the headaches of traditional scheduling and embrace the convenien
 
 ## Usage:
 
-placeholder
+Visit (placeholder) to sign up and test ShiftWiz for yourself!
 
 ## Screenshot:
 ![Screenshot of Application](./assets/images/screenshot.png)
