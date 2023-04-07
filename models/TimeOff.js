@@ -23,7 +23,7 @@ TimeOff.init(
             allowNull: false,
         },
         type: {
-            type: DataTypes.STRING,
+            type: DataTypes.ENUM('sick', 'pto'),
             allowNull: false
         },
         call_in_sick_reason: {
