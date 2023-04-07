@@ -91,7 +91,7 @@ router.get('/availability', withAuth, async (req, res) => {
 router.get('/sick-calls', withAuth, async (req, res) => {
   // TEMP!! ↓ -------------------------------------------------------------------------------- ↓
   try {
-    res.render('sickCalls', {
+    res.render('sickCall', {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
