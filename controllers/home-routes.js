@@ -91,15 +91,7 @@ router.get('/availability', withAuth, async (req, res) => {
 router.get('/sick-calls', withAuth, async (req, res) => {
   // TEMP!! ↓ -------------------------------------------------------------------------------- ↓
   try {
-    const sickCallData = await SickCall.findAll({
-      where: { userId: req.session.userId },
-      attributes: ['id', 'startDate', 'endDate', 'notes'],
-      order: [['startDate', 'ASC']],
-    });
-  // TEMP!! ↑ -------------------------------------------------------------------------------- ↑
-  // render sick call handlebar to submit a sick day notice
-    res.render('sick-calls', {
-      sickCalls: sickCallData,
+    res.render('sickCalls', {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
