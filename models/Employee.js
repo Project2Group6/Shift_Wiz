@@ -66,7 +66,7 @@ Employee.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'employee'
+        tableName: 'employee'
     }
 )
 

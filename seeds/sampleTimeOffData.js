@@ -73,6 +73,13 @@ const timeOffData = [
   },
 ]
 
-const seedTimeOff = () => TimeOff.bulkCreate(timeOffData)
+const seedTimeOff = async () => {
+  try {
+    await TimeOff.bulkCreate(timeOffData);
+    console.log('Time off data seeded successfully \n');
+  } catch (error) {
+    console.error('Error seeding time off data:', error);
+  }
+};
 
 module.exports = seedTimeOff;

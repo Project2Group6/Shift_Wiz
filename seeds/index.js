@@ -11,8 +11,9 @@ const seedAll = async () => {
   await seedEmployee();
 
   await seedTimeOff();
-
+  console.log("seeding finished");
   process.exit(0);
 };
+
 
 seedAll();
