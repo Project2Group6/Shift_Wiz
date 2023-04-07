@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const { Employee, TimeOff, User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 const getSched = require('../public/js/renderSched')
@@ -39,6 +39,7 @@ router.get('/schedule', withAuth, async (req, res) => {
 
 // GET profile page (TEMPLATE CODE)
 router.get('/profile', withAuth, async (req, res) => {
+  // TEMP!! ↓ ------------------------------------------------------------------------------ ↓
   try {
     const userData = await User.findByPk(req.session.userId, {
       attributes: ['firstName', 'lastName', 'email', 'username'],
@@ -49,7 +50,8 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 
     const user = userData.get({ plain: true });
-
+  // TEMP!! ↑ ------------------------------------------------------------------------------ ↑
+  // render profile handlebar and pass user specific data
     res.render('profile', {
       profile: profileData,
       loggedIn: req.session.loggedIn
@@ -61,6 +63,69 @@ router.get('/profile', withAuth, async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
+  }
+});
+
+// GET availability page (TEMPLATE CODE)
+router.get('/availability', withAuth, async (req, res) => {
+  // TEMP!! ↓ ------------------------------------------------------------------------------- ↓
+  try {
+    const availabilityData = await Availability.findAll({
+      where: { userId: req.session.userId },
+      attributes: ['id', 'startDate', 'endDate', 'notes'],
+      order: [['startDate', 'ASC']],
+    });
+  // TEMP!! ↑ ------------------------------------------------------------------------------- ↑
+    // render availibility handlebar (to modify, WIP)
+    res.render('availability', {
+      availability: availabilityData,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// GET sick calls page (TEMPLATE CODE)
+router.get('/sick-calls', withAuth, async (req, res) => {
+  // TEMP!! ↓ -------------------------------------------------------------------------------- ↓
+  try {
+    const sickCallData = await SickCall.findAll({
+      where: { userId: req.session.userId },
+      attributes: ['id', 'startDate', 'endDate', 'notes'],
+      order: [['startDate', 'ASC']],
+    });
+  // TEMP!! ↑ -------------------------------------------------------------------------------- ↑
+  // render sick call handlebar to submit a sick day notice
+    res.render('sick-calls', {
+      sickCalls: sickCallData,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// GET PTO page (TEMPLATE CODE)
+router.get('/pto', withAuth, async (req, res) => {
+  // TEMP!! ↓ ---------------------------------------------------------------------------------- ↓
+  try {
+    const ptoData = await PTO.findAll({
+      where: { userId: req.session.userId },
+      attributes: ['id', 'startDate', 'endDate', 'notes'],
+      order: [['startDate', 'ASC']],
+    });
+  // TEMP!! ↑ ---------------------------------------------------------------------------------- ↑
+  // render PTO handlebar to submit time off
+    res.render('pto', {
+      pto: ptoData,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
