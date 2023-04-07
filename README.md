@@ -24,6 +24,8 @@ Visit (placeholder) to sign up and test ShiftWiz for yourself!
 
 ## Screenshot:
 ![Screenshot of Application](./assets/images/screenshot.png)
+![Screenshot of Application](./assets/images/screenshot1.png)
+![Screenshot of Application](./assets/images/screenshot2.png)
 
 ## License
 
