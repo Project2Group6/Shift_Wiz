@@ -42,7 +42,7 @@ router.get('/profile', withAuth, async (req, res) => {
   // TEMP!! ↓ ------------------------------------------------------------------------------ ↓
   try {
     const userData = await User.findByPk(req.session.userId, {
-      attributes: ['firstName', 'lastName', 'email', 'username'],
+      attributes: ['email', 'username'],
     });
 
     if (!userData) {
@@ -50,10 +50,10 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 
     const user = userData.get({ plain: true });
-  // TEMP!! ↑ ------------------------------------------------------------------------------ ↑
-  // render profile handlebar and pass user specific data
+    // TEMP!! ↑ ------------------------------------------------------------------------------ ↑
+    // render profile handlebar and pass user specific data
     res.render('profile', {
-      profile: profileData,
+      profile: user,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
@@ -68,17 +68,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
 // GET availability page (TEMPLATE CODE)
 router.get('/availability', withAuth, async (req, res) => {
-  // TEMP!! ↓ ------------------------------------------------------------------------------- ↓
   try {
-    const availabilityData = await Availability.findAll({
-      where: { userId: req.session.userId },
-      attributes: ['id', 'startDate', 'endDate', 'notes'],
-      order: [['startDate', 'ASC']],
-    });
-  // TEMP!! ↑ ------------------------------------------------------------------------------- ↑
-    // render availibility handlebar (to modify, WIP)
     res.render('availability', {
-      availability: availabilityData,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -104,17 +95,9 @@ router.get('/sick-calls', withAuth, async (req, res) => {
 router.get('/pto', withAuth, async (req, res) => {
   // TEMP!! ↓ ---------------------------------------------------------------------------------- ↓
   try {
-    const ptoData = await PTO.findAll({
-      where: { userId: req.session.userId },
-      attributes: ['id', 'startDate', 'endDate', 'notes'],
-      order: [['startDate', 'ASC']],
-    });
-  // TEMP!! ↑ ---------------------------------------------------------------------------------- ↑
-  // render PTO handlebar to submit time off
     res.render('pto', {
-      pto: ptoData,
       loggedIn: req.session.loggedIn,
-    });
+    })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -132,9 +115,9 @@ router.get('/login', (req, res) => {
 
 
 // Signup
-router.get('/signup', (req,res)=>{
-    res.render('signup')
-   });
+router.get('/signup', (req, res) => {
+  res.render('signup')
+});
 
 module.exports = router;
 
