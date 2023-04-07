@@ -11,3 +11,5 @@ Painting.belongsTo(Gallery, {
 });
 
 module.exports = { User, Gallery, Painting };
+
+module.exports = {}

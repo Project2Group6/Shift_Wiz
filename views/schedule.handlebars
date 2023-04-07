@@ -1,161 +1,128 @@
-<section class="text-black pt-24 flex flex-col justify-around">
-    <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Schedule</h1>
-
-    <div class="relative overflow-x-auto mt-8">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase  bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="px-6 py-3">
-                        Days
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Monday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Tuesday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Wednesday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Thursday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Friday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Saturday
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Sunday
-                    </th>
-                </tr>
-            </thead>
-            <tbody class="border-b border-gray-300">
-                <tr class="bg-white">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Employees
-                    </th>
-                    <td class="px-6 py-4">
-                        Silver
-                    </td>
-                    <td class="px-6 py-4">
-                        Laptop
-                    </td>
-                    <td class="px-6 py-4">
-                        Jhon
-                    </td>
-                    <td class="px-6 py-4">
-                        Eployee 2
-                    </td>
-                    <td class="px-6 py-4">
-                        Employee 3
-                    </td>
-                    <td class="px-6 py-4">
-                        Employee 4
-                    </td>
-                    <td class="px-6 py-4">
-                        Employee 5
-                    </td>
-                </tr>
-                <tr class="bg-white">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                    </th>
-                    <td class="px-6 py-4">
-                        White
-                    </td>
-                    <td class="px-6 py-4">
-                        Laptop PC
-                    </td>
-                    <td class="px-6 py-4">
-                        Kim
-                    </td>
-                    <td class="px-6 py-4">
-                        Kim
-                    </td>
-                    <td class="px-6 py-4">
-                        Kim
-                    </td>
-                    <td class="px-6 py-4">
-                        Kim
-                    </td>
-                    <td class="px-6 py-4">
-                        Kim
-                    </td>
-                </tr>
-                <tr class="bg-white dark:bg-gray-800">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                    </th>
-                    <td class="px-6 py-4">
-                        Black
-                    </td>
-                    <td class="px-6 py-4">
-                        Accessories
-                    </td>
-                    <td class="px-6 py-4">
-                        Heather
-                    </td>
-                    <td class="px-6 py-4">
-                        Heather
-                    </td>
-                    <td class="px-6 py-4">
-                        Heather
-                    </td>
-                    <td class="px-6 py-4">
-                        Heather
-                    </td>
-                    <td class="px-6 py-4">
-                        Heather
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr class="bg-white">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Notes
-                    </th>
-                    <td class="px-6 py-4 w-2">
-                        Silver
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Laptop
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Alex
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Alex
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Alex
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Alex
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Alex is Sick due to some illness
-                    </td>
-                </tr>
-                <tr class="bg-white">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                    </th>
-                    <td class="px-6 py-4 w-2">
-                        Kim is taking a pto
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        Heather is taking a Sick Leave
-                    </td>
-                    <td class="px-6 py-4 w-2">
-                        John is taking paid time off
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <section class="text-black pt-24 flex flex-col justify-around">
+        <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Schedule</h1>
+<div class="relative overflow-x-auto mt-8">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase  bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Days
+                </th>
+                {{#each days}}
+                <th scope="col" class="px-6 py-3">
+                    {{this.day}} {{this.weekDate}}
+                </th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody class="border-b border-gray-300">
+            <tr class="bg-white">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   Employees
+                </th>
+                {{#schedEachDay this}}
+                <td class="px-6 py-4">
+                    {{workers}}
+                </td>
+                {{/schedEachDay}}           
+            </tr>
+            <tr class="bg-white">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    Kim
+                </td>
+                <td class="px-6 py-4">
+                    Kim
+                </td>
+                <td class="px-6 py-4">
+                    Kim
+                </td>
+                <td class="px-6 py-4">
+                    Kim
+                </td>
+                <td class="px-6 py-4">
+                    Kim
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    Heather
+                </td>
+                <td class="px-6 py-4">
+                    Heather
+                </td>
+                <td class="px-6 py-4">
+                    Heather
+                </td>
+                <td class="px-6 py-4">
+                    Heather
+                </td>
+                <td class="px-6 py-4">
+                    Heather
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="bg-white">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   Notes
+                </th>
+                <td class="px-6 py-4 w-2">
+                    Silver
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Laptop
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Alex
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Alex
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Alex
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Alex
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Alex is Sick due to some illness
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   
+                </th>
+                <td class="px-6 py-4 w-2">
+                    Kim is taking a pto
+                </td>
+                <td class="px-6 py-4 w-2">
+                    Heather is taking a Sick Leave
+                </td>
+                <td class="px-6 py-4 w-2">
+                    John is taking paid time off
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 
 
-</section>
+    </section>

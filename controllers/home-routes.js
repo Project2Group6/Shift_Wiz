@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Gallery, Painting } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
+const getSched = require('../public/js/renderSched')
 
 router.get('/', async (req, res) => {
   try {
@@ -20,19 +21,14 @@ router.get('/', async (req, res) => {
 });
 
 // GET schedule page (TEMPLATE CODE)
-router.get('/schedule', (req, res) => {
+router.get('/schedule', async (req, res) => {
   try {
+    const employeeData = await getSched
     // TODO: Fetch schedule data from the database and pass it to the template
-    const scheduleData = [
-      { date: '2023-04-03', event: 'Event 1' },
-      { date: '2023-04-04', event: 'Event 2' },
-      { date: '2023-04-05', event: 'Event 3' },
-      { date: '2023-04-06', event: 'Event 4' },
-      { date: '2023-04-07', event: 'Event 5' },
-    ];
-
+    console.log(employeeData)
     res.render('schedule', {
-      schedule: scheduleData,
+      sched: employeeData.sched,
+      days: employeeData.days,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -55,7 +51,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('profile', {
-      user,
+      profile: profileData,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
