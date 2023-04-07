@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET schedule page (TEMPLATE CODE)
-router.get('/schedule', async (req, res) => {
+router.get('/schedule', withAuth, async (req, res) => {
   try {
     const employeeData = await getSched
     // TODO: Fetch schedule data from the database and pass it to the template

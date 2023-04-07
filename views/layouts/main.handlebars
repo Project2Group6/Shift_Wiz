@@ -14,7 +14,7 @@
     <nav class="menu">
       <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
       <ul>
-        {{!-- {{#if loggedIn}} --}}
+        {{#if loggedIn}} 
         <a href="/schedule">
           <button class="btn-no-style">Schedule</button>
         </a>
@@ -24,9 +24,9 @@
         <a>
           <button id="logout" class="btn-no-style">Logout</button>
         </a>
-        {{!-- {{else}} --}}
+       {{else}}
         <li><a href="/login">Login</a></li>
-        {{!-- {{/if}} --}}
+        {{/if}}
       </ul>
     </nav>
   </header>

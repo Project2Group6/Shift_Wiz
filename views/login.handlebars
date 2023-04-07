@@ -1,31 +1,26 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">sign Up</button>
-      </div>
-      <div class="form-group">
-       <button onclick="window.location.href = '/signup'">Sign Up</button>
-     </div>
 
-    </form>
-    <div>
-      <a href="/signup" class="">Sign Up</a>
+ 
+
+<div class="login-div">
+    <div class="login-card">
+        <div class="login-logo">
+            <img src="/images/ShiftWizWIP.png" alt="icon of wizard wearing a hat">
+        </div>
+        <div class="login-title">Login</div>
+        <div class="login-sub-title">Master your schedule!</div>
+        <form class="login-form">
+            <div class="form-group">
+                <input class="form-input" type="text" id="email-login" placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <input class="form-input" type="password" id="password-login" placeholder="Password" />
+            </div>
+            <div class="form-group">
+                <button class="login-button" type="submit">Login</button>
+                <button class="signup-button" onclick="window.location.href = '/signup'">Sign Up</button>
+            </div>
+        </form>
     </div>
-  </div>
 
-</div>
 
-<script src="/public/js/login.js"></script>
+    <script src="./js/login.js"></script>
