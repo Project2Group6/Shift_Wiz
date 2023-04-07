@@ -1,6 +1,5 @@
   <section class="text-black pt-24 flex flex-col justify-around">
         <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Schedule</h1>
-      
 <div class="relative overflow-x-auto mt-8">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase  bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
@@ -8,27 +7,11 @@
                 <th scope="col" class="px-6 py-3">
                     Days
                 </th>
+                {{#each days}}
                 <th scope="col" class="px-6 py-3">
-                    Monday
+                    {{this.day}} {{this.weekDate}}
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Tuesday
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Wednesday
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Thursday
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Friday
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Saturday
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Sunday
-                </th>
+                {{/each}}
             </tr>
         </thead>
         <tbody class="border-b border-gray-300">
@@ -36,27 +19,11 @@
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                    Employees
                 </th>
+                {{#schedEachDay this}}
                 <td class="px-6 py-4">
-                    Silver
+                    {{workers}}
                 </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    Jhon
-                </td>
-                <td class="px-6 py-4">
-                    Eployee 2
-                </td>
-                <td class="px-6 py-4">
-                    Employee 3
-                </td>
-                <td class="px-6 py-4">
-                    Employee 4
-                </td>
-                <td class="px-6 py-4">
-                    Employee 5
-                </td>
+                {{/schedEachDay}}           
             </tr>
             <tr class="bg-white">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
