@@ -29,6 +29,7 @@ router.get('/schedule', withAuth, async (req, res) => {
     res.render('schedule', {
       sched: employeeData.sched,
       days: employeeData.days,
+      timeOff: employeeData.timeOff,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

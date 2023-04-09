@@ -1,10 +1,15 @@
 const { escapeExpression, SafeString } = require("handlebars");
+const { options } = require("../controllers");
+const dayjs = require("dayjs");
+var isBetween = require('dayjs/plugin/isBetween')
+dayjs.extend(isBetween)
 
 module.exports = {
   schedEachDay: (days, options) => {
     var day
     var dayArray = [days]
     returnedWrap = []
+
     function checkDay(dayToCheck) {
     // Check day
     if(dayToCheck === 'Sun') {
@@ -42,13 +47,45 @@ module.exports = {
       returned.workers = dailyWorkers
       }
     }
-    console.log(returnedWrap)
     finalReturn = ''
     returnedWrap.forEach(item => {
       finalReturn += options.fn(item)
     });
-    
-    console.log(finalReturn)
     return finalReturn
   },
+
+  schedNotes: (timeOff, options) => {
+    var timeOffArray = [timeOff]
+    returnWrap = []
+    
+    for (i = 0; i < timeOffArray[0].days.length; i++) {
+      returned = {}
+      returned.date = timeOffArray[0].days[i].fullDate
+      returnWrap.push(returned)
+      dailySick = []
+      dailyPTO = []
+      for (f = 0; f < timeOffArray[0].timeOff.length; f++) {
+        if (timeOffArray[0].timeOff[f].end_date != null) {
+          if (dayjs(timeOffArray[0].days[i].fullDate.toString()).isBetween(timeOffArray[0].timeOff[f].start_date.toString(), timeOffArray[0].timeOff[f].end_date.toString(), 'day', '[]')){
+            workerName =`${timeOffArray[0].timeOff[f].employee.first_name} ${timeOffArray[0].timeOff[f].employee.last_name} is taking PTO today`
+            dailyPTO.push(workerName)
+          }
+        } else if (timeOffArray[0].timeOff[f].end_date === null) {
+          if (timeOffArray[0].days[i].fullDate === timeOffArray[0].timeOff[f].start_date){
+            workerName =`${timeOffArray[0].timeOff[f].employee.first_name} ${timeOffArray[0].timeOff[f].employee.last_name} is sick today`
+            dailySick.push(workerName)
+          }
+        }
+        returned.pto = dailyPTO
+        returned.sick = dailySick
+        
+      }
+      
+    }
+    finalReturn = ''
+    returnWrap.forEach(item => {
+      finalReturn += options.fn(item)
+  })
+  return finalReturn
+  }
 }

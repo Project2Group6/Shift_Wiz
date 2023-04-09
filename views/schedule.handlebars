@@ -83,41 +83,12 @@
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                    Notes
                 </th>
+                {{#schedNotes this}}
                 <td class="px-6 py-4 w-2">
-                    Silver
+                    {{pto}}
+                    {{sick}}
                 </td>
-                <td class="px-6 py-4 w-2">
-                    Laptop
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Alex
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Alex
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Alex
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Alex
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Alex is Sick due to some illness
-                </td>
-            </tr>
-            <tr class="bg-white">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                   
-                </th>
-                <td class="px-6 py-4 w-2">
-                    Kim is taking a pto
-                </td>
-                <td class="px-6 py-4 w-2">
-                    Heather is taking a Sick Leave
-                </td>
-                <td class="px-6 py-4 w-2">
-                    John is taking paid time off
-                </td>
+                {{/schedNotes}}   
             </tr>
         </tbody>
     </table>

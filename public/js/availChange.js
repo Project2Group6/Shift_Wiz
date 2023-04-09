@@ -1,27 +1,22 @@
 const availChangeHandler = async (event) => {
     event.preventDefault();
   
-    const works_day = document.querySelector('#works_day').value;
-    const lastName = document.querySelector('#lastname-signup').value.trim();
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const works_sunday = document.querySelector('#works_sunday').value;
+    const works_monday = document.querySelector('#works_monday').value;
+    const works_tuesday = document.querySelector('#works_tuesday').value;
+    const works_wednesday = document.querySelector('#works_wednesday').value;
+    const works_thursday = document.querySelector('#works_thursday').value;
+    const works_friday = document.querySelector('#works_friday').value;
+    const works_saturday = document.querySelector('#works_saturday').value;
   
-    if (firstName && lastName && username && email && password) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ firstName, lastName, username, email, password }),
+      const response = await fetch('/api/request/availability', {
+        method: 'PUT',
+        body: JSON.stringify({ works_sunday, works_monday, works_tuesday, works_wednesday, works_thursday, works_friday, works_saturday}),
         headers: { 'Content-Type': 'application/json' },
       });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to sign up.');
-      }
     }
-  };
- 
+
   document
-    .querySelector('.signup-form')
+  // save button class here
+    .querySelector('')
     .addEventListener('submit', signupFormHandler);
