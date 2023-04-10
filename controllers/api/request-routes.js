@@ -20,10 +20,15 @@ router.get("/sick-calls", async(req,res)=>{
 
 
 // Post sick call
-router.post("/sick-calls", async (req, res) => {
+router.post("/pto", async (req, res) => {
   try {
-    const sickCall = await TimeOff.create(req.body)
-    res.status(200).json(sickCall)
+    const postPto = await TimeOff.create({
+      start_date: req.body.ptoStartDate,
+      end_date: req.body.ptoEndDate,
+      type: req.body.type,
+      employee_id: req.session.userId
+    })
+    res.status(200).json(postPto)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -46,10 +51,15 @@ router.get("/pto", async(req,res)=>{
 })
 
 //post pto
-router.post("/pto", async (req, res) => {
+router.post("/sick-calls", async (req, res) => {
     try {
-      const pto = await TimeOff.create(req.body)
-      res.status(200).json(pto)
+      const sickCall = await TimeOff.create({
+        start_date: req.body.sickDate,
+        type: req.body.type,
+        call_in_sick_reason: req.body.sickReason,
+        employee_id: req.session.userId
+      })
+      res.status(200).json(sickCall)
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

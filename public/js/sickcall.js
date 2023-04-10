@@ -2,16 +2,11 @@ const timeOffHandler = async (event) => {
     event.preventDefault();
   
     const sickDate = document.querySelector('#sickCallDate').value;
-    const sickReason = document.querySelector('#sickCallReason').value;
+    const sickReason = document.querySelector('#sickCallReason').value.trim();
   
       const response = await fetch('/api/request/sick-calls', {
         method: 'POST',
-        body: JSON.stringify({ 
-          "start_date": sickDate,
-          "type" : "sick",
-          "call_in_sick_reason": sickReason,
-        //   made default id to 1 for the timebeing
-          "employee_id" : 1
+        body: JSON.stringify({sickDate, type : "sick", sickReason,
         }),
         headers: { 'Content-Type': 'application/json' },
       });

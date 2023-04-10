@@ -3,17 +3,11 @@ const ptoHandler = async (event) => {
   
     const ptoStartDate = document.querySelector('#pto-start-date').value;
     const ptoEndDate = document.querySelector('#pto-end-date').value;
-    const ptoReason = document.querySelector('#pto-reason').value;
+    // const ptoReason = document.querySelector('#pto-reason').value;
   
-      const response = await fetch('/api/request/sick-calls', {
+      const response = await fetch('/api/request/pto', {
         method: 'POST',
-        body: JSON.stringify({ 
-          "start_date": ptoStartDate,
-          "end_date" : ptoEndDate,
-          "type" : "pto",
-          "call_in_sick_reason": ptoReason,
-        //   made default id to 1 for the timebeing
-          "employee_id" : 1
+        body: JSON.stringify({ptoStartDate, ptoEndDate, type: 'pto'
         }),
         headers: { 'Content-Type': 'application/json' },
       });
