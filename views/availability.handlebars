@@ -1,100 +1,46 @@
-<section class="flex flex-col justify-center pt-20">
-<h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">ADD AVIALABILITY</h1>
+<section class="flex flex-col justify-center pt-20 max-[425px]:pt-2">
+  <h1
+    class="text-center max-[425px]:p-4 text-black text-3xl tracking-[4px] mt-2 font-bold"
+  >UPDATE AVIALABILITY</h1>
 
-<div class="flex flex-row flex-wrap justify-center">
+  <div class="flex flex-col justify-center">
 
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-            
-    <legend class="text-black font-semibold text-xl">Monday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        
-        <label for="mondayStartTime" class="text-black">Start Time</label>
-    <input class="text-black" type="time" name="mondayStartTime" id="mondayStartTime" placeholder="start time">
-</div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="mondayEndtime" id="mondayEndTime" placeholder="end time">
-</div>
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Tuesday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        
-        <label for="tuesdayStartTime" class="text-black">Start Time</label>
-    <input class="text-black" type="time" name="tuesdayStartTime" id="tuesdayStartTime" placeholder="start time">
-</div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="tuesdayEndtime" id="tuesdayEndTime" placeholder="end time">
-</div>
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Wednesday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-
-    <label for="wednesdayStartTime" class="text-black">Start Time</label>
-    <input class="text-black" type="time" name="wednesdayStartTime" id="wednesdayStartTime" placeholder="start time">
-</div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="wednesdayEndtime" id="wednesdayEndTime" placeholder="end time">
-</div>
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Thursday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        
-        <label for="thursdayStartTime" class="text-black">Start Time</label>
-    <input class="text-black" type="time" name="thursdayStartTime" id="thursdayStartTime" placeholder="start time">
-</div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="thursdayEndtime" id="thursdayEndTime" placeholder="end time">
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Friday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        
-        <label for="fridayStartTime" class="text-black">Start Time</label>
-        <input class="text-black" type="time" name="fridayStartTime" id="fridayStartTime" placeholder="start time">
+    <div
+      class="bg-white shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] flex flex-col m-10 rounded-lg p-4 px-6 justify-around accent-slate-600 gap-8 text-black"
+    >
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Monday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Tuesday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Wednesday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Thursday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Friday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Saturday</h2>
+        <input type="checkbox" />
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Sunday</h2>
+        <input type="checkbox" />
+      </div>
     </div>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        <p class="text-black">End time</p>
-        <input class="text-black" type="time" name="fridayEndtime" id="fridayEndTime" placeholder="end time">
-</div>
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Saturday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-        
-        <label for="saturdayStartTime" class="text-black">Start Time</label>
-        <input class="text-black" type="time" name="saturdayStartTime" id="saturdayStartTime" placeholder="start time">
-    </div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="saturdayEndtime" id="saturdayEndTime" placeholder="end time">
-</div>
-</fieldset>
-<fieldset class="border border-black flex m-10 rounded-lg p-4 justify-around">
-    
-    <legend class="text-black font-semibold text-xl">Sunday</legend>
-    <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
 
-        <label for="sundayStartTime" class="text-black">Start Time</label>
-    <input class="text-black"  type="time" name="sundayStartTime" id="sundayStartTime" placeholder="start time">
-</div>
-<div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-4 bg-slate-100">
-    <p class="text-black">End time</p>
-    <input class="text-black" type="time" name="sundayEndtime" id="sundayEndTime" placeholder="end time">
-</div>
-</fieldset>
-</div>
+  </div>
 
-
-<button class="bg-black mx-16  mb-4 p-2 rounded-xl px-6 availabilityButton hover:bg-blue-300">Save</button>
+  <button
+    class="bg-black mx-16 mb-4 p-2 rounded-xl px-6 availabilityButton hover:bg-blue-300"
+  >Save</button>
 </section>

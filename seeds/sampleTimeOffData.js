@@ -9,8 +9,8 @@ const timeOffData = [
     employee_id: 1
   },
   {
-    start_date: '2023-04-17',
-    end_date: '2023-04-17',
+    start_date: '2023-04-09',
+    end_date: null,
     type: 'sick',
     call_in_sick_reason: 'Came down with the flu',
     employee_id: 1
@@ -24,21 +24,21 @@ const timeOffData = [
   },
   {
     start_date: '2023-04-14',
-    end_date: '2023-04-15',
+    end_date: null,
     type: 'sick',
     call_in_sick_reason: 'Sprained ankle',
     employee_id: 2
   },
   {
     start_date: '2023-04-28',
-    end_date: '2023-05-3',
+    end_date: '2023-05-03',
     type: 'pto',
     call_in_sick_reason: null,
     employee_id: 3
   },
   {
-    start_date: '2023-05-6',
-    end_date: '2023-05-6',
+    start_date: '2023-05-06',
+    end_date: null,
     type: 'sick',
     call_in_sick_reason: 'Mental health day',
     employee_id: 3
@@ -51,8 +51,8 @@ const timeOffData = [
     employee_id: 4
   },
   {
-    start_date: '2023-05-2',
-    end_date: '2023-05-2',
+    start_date: '2023-05-02',
+    end_date: null,
     type: 'sick',
     call_in_sick_reason: 'Doctors appointment',
     employee_id: 4
@@ -66,7 +66,7 @@ const timeOffData = [
   },
   {
     start_date: '2023-05-23',
-    end_date: '2023-05-24',
+    end_date: null,
     type: 'sick',
     call_in_sick_reason: 'Migraine',
     employee_id: 5

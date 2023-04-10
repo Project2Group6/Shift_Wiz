@@ -466,23 +466,6 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-@media (max-width: 768px) {
-  .nav {
-    height: 20px;
-  }
-
-  .menu ul{
-    font-size: 15px;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .logo{
-    height: 100px;
-  }
-
-}
 
 .gallery {
   flex: 4;
@@ -544,4 +527,35 @@ img {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  header{
+    padding: 10px 20px
+  }
+  .nav {
+    height: 20px;
+  }
+  
+  .nav a{
+    padding: 0;
+  }
+
+  .menu ul{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .logo{
+    height: 100px;
+  }
+  
+}
+@media (max-width: 425px) {
+  .logo{
+    margin: 0;
+    padding: 0;
+  }
 }
