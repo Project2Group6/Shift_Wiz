@@ -5,13 +5,19 @@ const { Employee, TimeOff } = require('../../models')
 // request for sick call
 router.get("/sick-calls", async(req,res)=>{
   try{
-    const getSickCalls = await TimeOff.findAll(req.body)
+    const getSickCalls = await TimeOff.findAll({
+      where:{
+        type: 'sick'
+      }
+    });
     res.status(200).json(getSickCalls)
   }catch(err){
     console.log(err);
     res.status(500).json(err);
   }
 })
+
+
 
 // Post sick call
 router.post("/sick-calls", async (req, res) => {
@@ -25,25 +31,29 @@ router.post("/sick-calls", async (req, res) => {
 
 
 // // request for pto
-// router.get("/pto", async(req,res)=>{
-//   try{
-//     const getPto = await TimeOff.findAll(req.body)
-//     res.status(200).json(getPto)
-//   }catch(err){
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// })
+router.get("/pto", async(req,res)=>{
+  try{
+    const getPto = await TimeOff.findAll( {
+  where:{
+    type: 'pto'
+  }
+});
+    res.status(200).json(getPto)
+  }catch(err){
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
-// //post pto
-// router.post("/pto", async (req, res) => {
-//     try {
-//       const pto = await TimeOff.create(req.body)
-//       res.status(200).json(pto)
-//     } catch (err) {
-//       console.log(err);
-//       res.status(500).json(err);
-//     }});
+//post pto
+router.post("/pto", async (req, res) => {
+    try {
+      const pto = await TimeOff.create(req.body)
+      res.status(200).json(pto)
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }});
 
 
 router.put("/availability", async (req, res) => {
