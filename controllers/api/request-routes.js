@@ -1,25 +1,49 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const { Employee } = require('../../models')
+const { Employee, TimeOff } = require('../../models')
 
+// request for sick call
+router.get("/sick-calls", async(req,res)=>{
+  try{
+    const getSickCalls = await TimeOff.findAll(req.body)
+    res.status(200).json(getSickCalls)
+  }catch(err){
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
+
+// Post sick call
 router.post("/sick-calls", async (req, res) => {
-    try {
+  try {
+    const sickCall = await TimeOff.create(req.body)
+    res.status(200).json(sickCall)
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }});
 
-    
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }});
 
+// // request for pto
+// router.get("/pto", async(req,res)=>{
+//   try{
+//     const getPto = await TimeOff.findAll(req.body)
+//     res.status(200).json(getPto)
+//   }catch(err){
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// })
 
-router.post("/pto", async (req, res) => {
-    try {
-
-    
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }});
+// //post pto
+// router.post("/pto", async (req, res) => {
+//     try {
+//       const pto = await TimeOff.create(req.body)
+//       res.status(200).json(pto)
+//     } catch (err) {
+//       console.log(err);
+//       res.status(500).json(err);
+//     }});
 
 
 router.put("/availability", async (req, res) => {
