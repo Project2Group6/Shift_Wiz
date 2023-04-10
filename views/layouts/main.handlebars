@@ -1,6 +1,3 @@
-
- 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,32 +7,33 @@
   <title>ShiftWiz</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
   <header>
-    <nav class="menu">
+    <nav class="menu h-20 ">
       <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
       <ul>
         {{#if loggedIn}}
 
         <a href="/schedule">
-          <button class="btn-no-style">Schedule</button>
+          <button class=" ">Schedule</button>
         </a>
         <a href="/availability">
-          <button class="btn-no-style">Availability</button>
+          <button class=" ">Availability</button>
         </a>
         <a href="/pto">
-          <button class="btn-no-style">PTO</button>
+          <button class=" ">PTO</button>
         </a>
         <a href="/sick-calls">
-          <button class="btn-no-style">Sick Call</button>
+          <button class=" ">Sick Call</button>
         </a>
         <a href="/profile">
-          <button class="btn-no-style">Profile</button>
+          <button class=" ">Profile</button>
         </a>
         <a>
-          <button id="logout" class="btn-no-style">Logout</button>
+          <button id="logout" class=" ">Logout</button>
         </a>
         {{else}}
         <li><a href="/login">Login</a></li>
@@ -50,6 +48,5 @@
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   {{/if}}
 </body>

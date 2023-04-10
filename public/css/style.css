@@ -377,7 +377,7 @@ header {
 }
 
 .menu {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   width: 100%;
   align-items: center;
@@ -385,6 +385,7 @@ header {
 }
 
 .menu ul {
+  overflow: hidden;
   float: right;
   margin: 0;
   padding: 0;
@@ -412,9 +413,12 @@ header {
 
 .logo {
   float: left;
-  max-height: 125px;
+  height: 175px;
   margin-right: 20px;
+  margin-top: 50px;
+  z-index: 10;
 }
+
 
 ul {
   display: flex;
@@ -462,14 +466,35 @@ nav a:hover {
   background-color: var(--dark);
 }
 
+@media (max-width: 768px) {
+  .nav {
+    height: 20px;
+  }
+
+  .menu ul{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .logo{
+    height: 100px;
+  }
+
+}
+
 .gallery {
   flex: 4;
   background-color: #e4e4e4;
-  padding: 50px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.availabilityButton:hover{
+  background-color: rgb(73, 158, 197);
 }
 
 .btn-no-style {
