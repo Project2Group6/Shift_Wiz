@@ -6,12 +6,19 @@ const timeOffHandler = async (event) => {
   
       const response = await fetch('/api/request/sick-calls', {
         method: 'POST',
-        body: JSON.stringify({ sickDate, sickReason}),
+        body: JSON.stringify({ 
+          "start_date": sickDate,
+          "type" : "sick",
+          "call_in_sick_reason": sickReason,
+        //   made default id to 1 for the timebeing
+          "employee_id" : 1
+        }),
         headers: { 'Content-Type': 'application/json' },
       });
     }
 
     // save button class here
   document
-    .querySelector('#save-sick-call')
+    .querySelector('.sick-call-form')
+    // Need to add re-direct to a different page after submitting
     .addEventListener('submit', timeOffHandler);
