@@ -85,6 +85,12 @@ body {
   color: white;
 }
 
+.login-button,
+.signup-button:hover {
+  cursor: pointer;
+}
+
+
 .form-group button:hover {
   background-color: white;
   color: black;
@@ -138,16 +144,13 @@ body {
 }
 
 .splash-screen {
-  margin: 0 0 20px 0;
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding: 5px;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  border-style: double;
-  border-width: thick;
-  background-color: #404040;
-  color: var(--light);
+  margin: 100px auto;
+  width: 350px;
+  background-color: gray;
+  opacity: 0.7;
+  padding: 60px;
+  border-radius: 25px;
+  color: black;
 }
 
 .dropbtn {
@@ -269,7 +272,7 @@ nav a {
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 nav a:hover {
@@ -308,7 +311,9 @@ nav a:hover {
 }
 
 .btn-no-style:hover {
+  color: #ffffff;
   color: var(--light);
+  background-color: #000000;
   background-color: var(--dark);
 }
 
