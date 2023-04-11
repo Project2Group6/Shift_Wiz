@@ -48,7 +48,7 @@ THEN I am logged out
 
 ## Usage:
 
-Visit (placeholder) to sign up and test ShiftWiz for yourself!
+Visit https://shift-wiz.herokuapp.com/ to sign up and test ShiftWiz for yourself!
 
 ## Screenshots:
 ![Screenshot of Application](./assets/images/screenshot.png)
