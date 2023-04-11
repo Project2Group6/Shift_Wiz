@@ -6,6 +6,8 @@ Employee.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
+User.hasOne(Employee)
+
 Employee.hasMany(TimeOff, {
     foreignKey: 'employee_id'
 })

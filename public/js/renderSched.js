@@ -1,10 +1,9 @@
+async function getSched() {
+
 const sequelize = require('../../config/connection')
 const { TimeOff } = require('../../models')
 const Employee = require('../../models/Employee')
 const dayjs = require('dayjs')
-
-async function getSched() {
-
 const today = dayjs()
 const week = []
 
@@ -54,7 +53,6 @@ for(i = 0; i < 7; i++) {
             as: 'employee',
         }
     })
-
     const employeeData = {sched: schedData.map((id) => 
     id.get({plain: true})), days: dayDatePairs, timeOff: timeOffData.map((id) => id.get({plain: true}))}
     return employeeData

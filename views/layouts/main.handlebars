@@ -14,9 +14,9 @@
 
 <body>
   <header>
-    <nav class="menu">
+    <nav class="menu max-[425px]:h-auto max-[425px]:flex max-[425px]:flex-col">
       <img src="/images/ShiftWizWIP.png" alt="Logo" class="logo">
-      <ul>
+      <ul class="max-[425px]:flex max-[425px]:flex-row max-[425px]:flex-wrap max-[425px]:mt-4 max-[425px]:justify-center max-[425px]:overflow-hidden">
         {{#if loggedIn}}
 
         <a href="/schedule">
@@ -44,7 +44,7 @@
     </nav>
   </header>
   <main id="main-content">
-    <div class="gallery">
+    <div class="gallery max-[425px]:p-0 max-[425px]:m-0 max-[425px]:w-[95%]">
       {{{body}}}
     </div>
   </main>

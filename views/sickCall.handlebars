@@ -1,11 +1,13 @@
-<section class="flex flex-col justify-center mx-10 pt-20">
+<section class="flex flex-col justify-center mx-10 max-[425px]:mx-1 pt-20 max-[425px]:pt-2">
     <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Sick Call Request</h1>
     <form class="sick-call-form">
-        <div class="flex flex-col mt-10">
+        <div class="bg-white rounded-lg flex mt-4 flex-col justify-center p-8 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+
+        <div class="flex flex-col">
             <label for="sickCallDate" class="text-black">Select the Date</label>
             <!-- need to adjust the format for the future date -->
             {{!-- added id for date input --}}
-            <input type="date" class="w-[10rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="sickCallDate">
+            <input type="date" class="w-[20rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="sickCallDate">
         </div>
         <div class="flex flex-col mt-10">
             <label for="sickCallReason" class="text-black">Reason</label>
@@ -17,6 +19,7 @@
         {{!-- added id for save button --}}
         <button class="bg-black mx-16  mb-4 p-2 rounded-xl mt-8 px-6 hover:cursor-pointer hover:bg-blue-500"
             id="save-sick-call" type="submit">Save</button>
+        </div>
     </form>
 
 

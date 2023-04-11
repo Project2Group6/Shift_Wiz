@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Employee, TimeOff, User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
-const getSched = require('../public/js/renderSched')
+const getSched = require('../public/js/renderSched');
+const { raw } = require('express');
 
 router.get('/', async (req, res) => {
   try {
@@ -23,9 +24,8 @@ router.get('/', async (req, res) => {
 // GET schedule page (TEMPLATE CODE)
 router.get('/schedule', withAuth, async (req, res) => {
   try {
-    const employeeData = await getSched
+    const employeeData = await getSched;
     // TODO: Fetch schedule data from the database and pass it to the template
-    console.log(employeeData)
     res.render('schedule', {
       sched: employeeData.sched,
       days: employeeData.days,
@@ -43,18 +43,23 @@ router.get('/profile', withAuth, async (req, res) => {
   // TEMP!! ↓ ------------------------------------------------------------------------------ ↓
   try {
     const userData = await User.findByPk(req.session.userId, {
-      attributes: ['email', 'username'],
-    });
-
+      attributes: ['username', 'email'],
+      include: {
+          model: Employee,
+          attributes: ['first_name', 'last_name', 
+          'works_sunday', 'works_monday', 'works_tuesday', 'works_wednesday',
+           'works_thursday', 'works_friday', 'works_saturday', ],
+           as: 'employee',
+      },
+  })
     if (!userData) {
       throw new Error('User data not found');
     }
-
-    const user = userData.get({ plain: true });
+    // const user = userData.get({ plain: true });
     // TEMP!! ↑ ------------------------------------------------------------------------------ ↑
     // render profile handlebar and pass user specific data
     res.render('profile', {
-      profile: user,
+      profile: userData.get({plain:true}),
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
@@ -70,7 +75,12 @@ router.get('/profile', withAuth, async (req, res) => {
 // GET availability page (TEMPLATE CODE)
 router.get('/availability', withAuth, async (req, res) => {
   try {
+    const avail = await Employee.findByPk(req.session.userId, {
+      attributes: ['works_sunday', 'works_monday', 'works_tuesday', 'works_wednesday',
+      'works_thursday', 'works_friday', 'works_saturday']
+    })
     res.render('availability', {
+      avail: avail.get({plain: true}),
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

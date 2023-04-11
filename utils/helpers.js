@@ -87,5 +87,21 @@ module.exports = {
       finalReturn += options.fn(item)
   })
   return finalReturn
+  },
+
+  availCheck: (avail, options) => {
+    if(avail === true) {
+      return new SafeString('checked')
+    } else {
+      return new SafeString('')
+    }
+  },
+
+  profileAvailCheck: (avail, options) => {
+    if(avail === true) {
+      return new SafeString('<p class="w-[33%] text-center text-green-800">Working</p>')
+    } else {
+      return new SafeString('<p class="w-[33%] text-center text-red-800">Not Working</p>')
+    }
   }
 }

@@ -1,14 +1,14 @@
-  <section class="text-black pt-24 flex flex-col justify-around">
-        <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Schedule</h1>
-<div class="relative overflow-x-auto mt-8">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase  bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
+<section class="text-black flex flex-col overflow-hidden justify-around w-full max-[426px]:mt-2">
+  <h1 class="text-center text-black text-3xl overflow-hidden tracking-[4px] mt-2 font-bold">Schedule</h1>
+  <div class="flex flex-row justify-center overflow-auto max-[426px]:my-4">
+    <table class="w-[80%] max-[426px]:relative max-[426px]:overflow-scroll max-[426px]:left-0 max-[426px]:w-[200vw] max-[426px]:ml-[50%] max-[375px]:ml-[70%]  max-[320px]:ml-[90%] max-[768px]:w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 max-[768px]:p-1 max-[426px]:px-6">
                     Days
                 </th>
                 {{#each days}}
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 max-[768px]:p-1 max-[426px]:px-1 max-[426px]:px-6">
                     {{this.day}} {{this.weekDate}}
                 </th>
                 {{/each}}
@@ -20,73 +20,24 @@
                    Employees
                 </th>
                 {{#schedEachDay this}}
-                <td class="px-6 py-4">
-                    {{workers}}
+                <td class="px-6 py-4 w-[15%] max-[768px]:p-1 max-[426px]:w-[200px]">
+                    {{#each workers}} 
+                    {{this}}<br /><br/>
+                    {{/each}}
                 </td>
                 {{/schedEachDay}}           
             </tr>
-            <tr class="bg-white">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                   
-                </th>
-                <td class="px-6 py-4">
-                    White
-                </td>
-                <td class="px-6 py-4">
-                    Laptop PC
-                </td>
-                <td class="px-6 py-4">
-                    Kim
-                </td>
-                <td class="px-6 py-4">
-                    Kim
-                </td>
-                <td class="px-6 py-4">
-                    Kim
-                </td>
-                <td class="px-6 py-4">
-                    Kim
-                </td>
-                <td class="px-6 py-4">
-                    Kim
-                </td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                   
-                </th>
-                <td class="px-6 py-4">
-                    Black
-                </td>
-                <td class="px-6 py-4">
-                    Accessories
-                </td>
-                <td class="px-6 py-4">
-                    Heather
-                </td>
-                <td class="px-6 py-4">
-                    Heather
-                </td>
-                <td class="px-6 py-4">
-                    Heather
-                </td>
-                <td class="px-6 py-4">
-                    Heather
-                </td>
-                <td class="px-6 py-4">
-                    Heather
-                </td>
-            </tr>
+        
         </tbody>
-        <tbody>
+        <tbody class="h-[25vh]">
             <tr class="bg-white">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                    Notes
                 </th>
                 {{#schedNotes this}}
-                <td class="px-6 py-4 w-2">
-                    {{pto}}
-                    {{sick}}
+                <td class="px-6 py-4 w-4 max-[768px]:p-1">
+                    {{pto}}<br/><br>
+                    {{sick}}<br/><br>
                 </td>
                 {{/schedNotes}}   
             </tr>
