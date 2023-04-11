@@ -44,8 +44,7 @@ THEN I am logged out
 * [Screenshots](#screenshots)
 * [Demo](#Demo)
 * [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
+* [Application](#application)
 
 ## Usage:
 
@@ -65,10 +64,5 @@ https://user-images.githubusercontent.com/119437696/231288210-b9b5e599-4372-4d1b
 This project is licensed under the MIT license. Click [here](https://opensource.org/licenses/MIT) for more information.<br>
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Contributing:
-
-NA
-
-## Tests:
-
-NA
+## Application:
+https://shift-wiz.herokuapp.com/
