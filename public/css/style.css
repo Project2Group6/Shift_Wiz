@@ -28,7 +28,7 @@ body {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: rgb(128, 128, 128);
   margin: 15% auto; 
   padding: 20px;
   width: 80%; 

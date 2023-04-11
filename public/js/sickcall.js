@@ -14,16 +14,16 @@ const timeOffHandler = async (event) => {
   modal.style.display = "none";
   emptyModal.style.display = "none";
 
-  modalClose.addEventListener("click", function () {
+  modalClose.addEventListener("click", function() {
     modal.style.display = "none";
     document.location.href = "/schedule";
   });
 
-  emptyModalClose.addEventListener("click", function () {
+  emptyModalClose.addEventListener("click", function() {
     emptyModal.style.display = "none";
   });
 
-  if (sickReason === "" && sickDate === "") {
+  if (sickReason ==="" && sickDate ==="") {
     emptyModal.style.display = "block";
     // Open the modal
     // ...
@@ -32,8 +32,7 @@ const timeOffHandler = async (event) => {
     // ...
     const response = await fetch('/api/request/sick-calls', {
       method: 'POST',
-      body: JSON.stringify({
-        sickDate, type: "sick", sickReason,
+      body: JSON.stringify({sickDate, type : "sick", sickReason,
       }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -41,10 +40,10 @@ const timeOffHandler = async (event) => {
     modal.style.display = "block";
   }
 
-
+  
 }
 
-// save button class here
+  // save button class here
 document
   .querySelector('.sick-call-form')
   // Need to add re-direct to a different page after submitting
