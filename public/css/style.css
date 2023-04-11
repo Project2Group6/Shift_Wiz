@@ -6,6 +6,50 @@ body {
   background-color: #E4E4E4;
 }
 
+/* styling for modals */
+
+.modal, .empty-modal {
+  margin: 20px auto;
+  width: 350px;
+  height: 200px;
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  overflow: auto; 
+  background-color: transparent;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto; 
+  padding: 20px;
+  width: 80%; 
+  align-items: center;
+  border-radius: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .login-div,
 .signup-div {
   margin: 100px auto;
