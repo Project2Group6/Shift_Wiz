@@ -1,18 +1,23 @@
-<section class="flex flex-col justify-center mx-10 pt-20">
+<section class="flex flex-col justify-center mx-10 max-[425px]:mx-1 pt-20 max-[425px]:pt-2">
     <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Paid Time Off</h1>
     <form class="pto-form">
-        <div class="flex flex-col mt-10">
-            <label for="ptoStartDate" class="text-black">Select the Start Date</label>
-            <!-- need to adjust the format for the future date -->
-            <input type="date" class="w-[10rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="pto-start-date">
+        <div
+            class="bg-white rounded-lg flex mt-4  flex-col justify-center p-8 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+
+            <div class="flex flex-col">
+                <label for="ptoStartDate" class="text-black">Select the Start Date</label>
+                <!-- need to adjust the format for the future date -->
+                <input type="date" class="w-[20rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="pto-start-date">
+            </div>
+            <div class="flex flex-col mt-10">
+                <label for="ptoEndDate" class="text-black">Select the End Date</label>
+                <!-- need to adjust the format for the future date -->
+                <input type="date" class="w-[20rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="pto-end-date">
+            </div>
+            <button
+                class="bg-black hover:text-green-500 mx-16 mb-4 p-2 rounded-xl mt-8 px-6 hover:cursor-pointer hover:bg-blue-500"
+                id="save-pto" type="submit">Save</button>
         </div>
-        <div class="flex flex-col mt-10">
-            <label for="ptoEndDate" class="text-black">Select the End Date</label>
-            <!-- need to adjust the format for the future date -->
-            <input type="date" class="w-[10rem] text-black bg-slate-200 p-2 px-4 rounded-xl" id="pto-end-date">
-        </div>
-        <button class="bg-black hover:text-green-500 mx-16  mb-4 p-2 rounded-xl mt-8 px-6 hover:cursor-pointer hover:bg-blue-500"
-            id="save-pto" type="submit">Save</button>
     </form>
 </section>
 {{!--sick modal div --}}
