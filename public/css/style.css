@@ -269,6 +269,7 @@ nav a {
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  border-radius: 15px;
 }
 
 nav a:hover {
