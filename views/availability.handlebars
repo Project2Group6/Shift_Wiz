@@ -1,0 +1,48 @@
+<section class="flex flex-col justify-center pt-20 max-[425px]:pt-2">
+  <h1
+    class="text-center max-[425px]:p-4 text-black text-3xl tracking-[4px] mt-2 font-bold"
+  >UPDATE AVAILABILITY</h1>
+
+  <div class="flex flex-col justify-center">
+    <form class="availability-form">
+    <div
+      class="bg-white shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] flex flex-col m-10 rounded-lg p-4 px-6 justify-around accent-slate-600 gap-8 text-black"
+    >
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Monday</h2>
+        <input type="checkbox" id="works_monday" {{#availCheck avail.works_monday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Tuesday</h2>
+        <input type="checkbox" id="works_tuesday" {{#availCheck avail.works_tuesday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Wednesday</h2>
+        <input type="checkbox" id="works_wednesday" {{#availCheck avail.works_wednesday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Thursday</h2>
+        <input type="checkbox" id="works_thursday" {{#availCheck avail.works_thursday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Friday</h2>
+        <input type="checkbox" id="works_friday" {{#availCheck avail.works_friday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Saturday</h2>
+        <input type="checkbox" id="works_saturday" {{#availCheck avail.works_saturday}}{{/availCheck}}/>
+      </div>
+      <div class="flex flex-row justify-between">
+        <h2 class="text-">Sunday</h2>
+        <input type="checkbox" id="works_sunday" {{#availCheck avail.works_sunday}}{{/availCheck}}/>
+      </div>
+  </div>
+
+  </div>
+
+  <button
+    class="bg-black hover:text-green-500 mx-16 mb-4 p-2 rounded-xl px-6 availabilityButton hover:bg-blue-300" type="submit"
+  >Save</button>
+  </form>
+  <script src="./js/availChange.js"></script>
+</section>
