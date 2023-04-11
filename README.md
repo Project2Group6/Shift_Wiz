@@ -40,11 +40,16 @@ THEN I am logged out
 
 ## Table of Contents:
 
+* [Technology](#technology)
 * [Usage](#usage)
 * [Screenshots](#screenshots)
 * [Demo](#Demo)
 * [License](#license)
 * [Application](#application)
+
+## Technology:
+
+Dayjs, Jass, Google fonts, MySQL, Node (Express), Handlebars, BCrypt, tailwind
 
 ## Usage:
 
