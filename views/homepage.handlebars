@@ -1,14 +1,19 @@
-<div class="splash-screen">
-  <h1>Welcome to ShiftWiz!</h1>
-  <p>Our team created ShiftWiz to simplify the process of posting work schedules for you employess. Gone are the days
-    of print out schedules and wasted paper. Our goal is to make an easy to use platform for distributing employee
-    schdeules, submitting PTO/Sick days and schedule alterations.</p>
 
-  {{#if isLoggedIn}}
-  <!-- Add content for logged in users here -->
-  {{else}}
-  <div class="form-group">
-    <button class="login-button" onclick="redirectToLogin()">Log in</button>
+
+
+<div class="splash-screen">
+  <div class="login-card">
+    <h1>Welcome to ShiftWiz!</h1>
+    <p>Our team created ShiftWiz to simplify the process of posting work schedules for you employess. Gone are the days
+      of print out schedules and wasted paper. Our goal is to make an easy to use platform for distributing employee
+      schdeules, submitting PTO/Sick days and schedule alterations.</p>
+
+    {{#if isLoggedIn}}
+    <!-- Add content for logged in users here -->
+    {{else}}
+    <div class="form-group">
+      <button class="login-button" onclick="redirectToLogin()">Log in</button>
+    </div>
+    {{/if}}
   </div>
-  {{/if}}
 </div>

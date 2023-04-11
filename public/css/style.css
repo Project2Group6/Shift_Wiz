@@ -188,7 +188,7 @@ body {
 }
 
 .splash-screen {
-  margin: 100px auto;
+  margin: 100px auto; /* Set top and bottom margin to 100px, and left and right margin to auto */
   width: 350px;
   background-color: gray;
   opacity: 0.7;
@@ -196,6 +196,7 @@ body {
   border-radius: 25px;
   color: black;
 }
+
 
 .dropbtn {
   display: inline-block;
