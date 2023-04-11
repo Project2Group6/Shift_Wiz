@@ -10,6 +10,34 @@ The app also includes a feature for calling in sick, making it easy for employee
 
 Say goodbye to the headaches of traditional scheduling and embrace the convenience of ShiftWiz. Try it out today and see for yourself how it can transform your work experience!
 
+## User Story:
+```md
+GIVEN I am presented with the login page
+WHEN I input my email  and password
+THEN I am able to successfully login to the homepage
+WHEN I select create account 
+THEN I am presented with a create account page
+WHEN I input my first name, last name, username, email  and password
+THEN the user is created successfully
+WHEN I log into the webpage without creating a user 
+THEN I am prompted to create a user
+WHEN I select logout button
+THEN I am successfully logged out and redirected to the login page 
+WHEN I successfully login
+THEN I am presented with the homepage with options to add availability, PTO request and request to call in sick
+WHEN I click the availability modification
+THEN I am presented with a text box to input the days and time I am available to work
+GIVEN I want to plan my paid leave
+WHEN I click the PTO request
+THEN I am presented with calendars to input the start date and end date I want to ask for paid leave
+GIVEN I am unable to work because I fell sick
+WHEN I click the call in sick request
+THEN I am presented with a calendar and text box to leave a note that I am sick on that day
+GIVEN I want to logout to protect my credentials
+WHEN I click on the logout button
+THEN I am logged out
+```
+
 ## Table of Contents:
 
 * [Usage](#usage)
