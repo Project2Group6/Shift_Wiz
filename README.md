@@ -42,6 +42,7 @@ THEN I am logged out
 
 * [Usage](#usage)
 * [Screenshots](#screenshots)
+* [Demo](#Demo)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -54,6 +55,10 @@ Visit (placeholder) to sign up and test ShiftWiz for yourself!
 ![Screenshot of Application](./assets/images/screenshot.png)
 ![Screenshot of Application](./assets/images/screenshot1.png)
 ![Screenshot of Application](./assets/images/screenshot2.png)
+
+## Demo:
+https://user-images.githubusercontent.com/119437696/231288210-b9b5e599-4372-4d1b-9f69-63b0c30c868f.mp4
+
 
 ## License
 
