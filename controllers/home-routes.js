@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Employee, TimeOff, User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
-const getSched = require('../public/js/renderSched');
 const { raw } = require('express');
 const dayjs = require('dayjs')
 const today = dayjs()
