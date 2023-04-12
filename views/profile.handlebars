@@ -1,24 +1,26 @@
-<section class="pt-20  max-[425px]:pt-4 max-[425px]:mx-0 mx-10 w-full">
+<section class="pt-2  max-[425px]:pt-4 max-[425px]:mx-0 mx-10 w-full">
+    <h1 class="text-center text-black text-3xl tracking-[4px] mt-2 font-bold">Your Profile</h1>
 
-    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-around">
-        <p class="text-black  w-[33%]">{{profile.employee.first_name}} {{profile.employee.last_name}}</p>
+
+    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-start">
         <legend class="text-black font-semibold text-xl">Name</legend>
-        <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100">
+        <p class="text-black  w-[33%]">{{profile.employee.first_name}} {{profile.employee.last_name}}</p>
+        {{!-- <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100"> --}}
             
 
     </fieldSet>
 
-    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-around">
+    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-start">
         <p class="text-black  w-[33%]">{{profile.username}}</p>
         <legend class="text-black font-semibold text-xl">Username</legend>
-        <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100">
+        {{!-- <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100"> --}}
 
     </fieldSet>
 
-    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-around">
+    <fieldSet class="border border-black flex m-10 rounded-lg p-4 justify-start">
         <p class="text-black  w-[33%]">{{profile.email}}</p>
         <legend class="text-black font-semibold text-xl">Email</legend>
-        <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100">
+        {{!-- <div class="flex flex-col m-2 ml-6 rounded-xl gap-4 p-0 bg-slate-100"> --}}
 
     </fieldSet>
     

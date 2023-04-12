@@ -1,5 +1,5 @@
 <section class="text-black flex flex-col overflow-hidden justify-around w-full max-[426px]:mt-2">
-  <h1 class="text-center text-black text-3xl overflow-hidden tracking-[4px] mt-2 font-bold">Schedule</h1>
+  <h1 class="text-center text-black text-3xl overflow-hidden tracking-[4px] my-6 font-bold">Schedule</h1>
   <div class="flex flex-row justify-center overflow-auto max-[426px]:my-4">
     <table class="w-[80%] max-[426px]:relative max-[426px]:overflow-scroll max-[426px]:left-0 max-[426px]:w-[200vw] max-[426px]:ml-[50%] max-[375px]:ml-[70%]  max-[320px]:ml-[90%] max-[768px]:w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
@@ -8,7 +8,7 @@
                     Days
                 </th>
                 {{#each days}}
-                <th scope="col" class="px-6 py-3 max-[768px]:p-1 max-[426px]:px-1 max-[426px]:px-6">
+                <th scope="col" class="px-6 py-3 max-[768px]:p-1 max-[426px]:px-1">
                     {{this.day}} {{this.weekDate}}
                 </th>
                 {{/each}}
