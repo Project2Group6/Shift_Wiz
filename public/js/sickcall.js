@@ -11,6 +11,8 @@ const timeOffHandler = async (event) => {
   const modalClose = document.querySelector("#sick-modal-close");
   const emptyModalClose = document.querySelector("#empty-modal-close");
 
+  
+
   modal.style.display = "none";
   emptyModal.style.display = "none";
 
@@ -42,6 +44,30 @@ const timeOffHandler = async (event) => {
 
   
 }
+
+
+
+var sickCallDateInput = document.getElementById("sickCallDate");
+
+var todaysDate = new Date(); // Get today's date.
+
+// Get today's date.
+
+var year = todaysDate.getFullYear(); // yyyy
+
+var month = ("0" + (todaysDate.getMonth() + 1)).slice(-2); // mm
+
+var day = ("0" + todaysDate.getDate()).slice(-2); // dd
+
+var dtToday = year + "-" + month + "-" + day; // Results in yyyy-mm-dd
+
+
+
+sickCallDateInput.setAttribute('min', dtToday);
+
+
+
+
 
   // save button class here
 document
