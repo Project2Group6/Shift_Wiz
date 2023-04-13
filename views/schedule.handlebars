@@ -36,8 +36,14 @@
                 </th>
                 {{#schedNotes this}}
                 <td class="px-6 py-4 w-4 max-[768px]:p-1">
-                    {{pto}}<br/><br>
-                    {{sick}}<br/><br>
+                    {{#each pto}} 
+                    {{this}}<br /><br/>
+                    {{/each}}
+                    {{#each sick}} 
+                    {{this}}<br /><br/>
+                    {{/each}}
+                    {{!-- {{pto}}<br/><br>
+                    {{sick}}<br/><br> --}}
                 </td>
                 {{/schedNotes}}   
             </tr>
